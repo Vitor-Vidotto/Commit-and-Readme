@@ -35,5 +35,5 @@ Este projeto é licenciado sob a Licença MIT.
 
 
 ## Quer ver um exemplo aplicado?
-Veja a documentação de exemplo: [here](./ReadmePTBR/Readme.md)!
+Veja a documentação de exemplo: [here](./README.md)!
 
