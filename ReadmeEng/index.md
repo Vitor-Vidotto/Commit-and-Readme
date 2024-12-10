@@ -34,8 +34,6 @@ Brief description of what the project does and its main goals.
 This project is licensed under the MIT License.
 
 
-
-
 ## Wanna see more how i did my project documentation?
 See the complete documentation [here](./Readme.md)!
 
