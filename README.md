@@ -14,7 +14,6 @@ See the complete documentation [here](./CommitEng/index.md)!
 See the complete documentation [here](./ReadmeEng/index.md)!
 
 
-All the credits for the Commit file: [Iuricode](https://github.com/iuricode/padroes-de-commits?tab=readme-ov-file)
 ---
 
 # Padronização de Commit e Readme
@@ -33,4 +32,6 @@ Veja a documentação completa [aqui](./ReadmePTBR/index.md)!
 
 
 ## Espero ter ajudado!!!
+
 Todos os créditos ao arquivo de Commit ao [Iuricode](https://github.com/iuricode/padroes-de-commits?tab=readme-ov-file)
+All the credits for the Commit file: [Iuricode](https://github.com/iuricode/padroes-de-commits?tab=readme-ov-file)
