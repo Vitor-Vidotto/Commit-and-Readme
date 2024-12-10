@@ -1,276 +1,121 @@
-# Commit Standards 📜
+---
 
-According to the **[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)** documentation, semantic commits are a simple convention to be used in commit messages. This convention defines a set of rules for creating an explicit commit history, which facilitates the creation of automated tools.
+# Commit Standards: Convention and Specification
 
-These commits will help you and your team to easily understand which changes were made in the chunk of code that was committed.
+## Overview
 
-This identification occurs through a word and emoji that indicate whether the commit is related to a code change, package update, documentation, UI change, test, and more.
+The **Conventional Commits** specification defines a clear convention for commit messages, providing a format that is readable by both humans and automated tools. It allows organizing the code history in a way that facilitates the automatic generation of changelogs, determines semantic versioning (SemVer) automatically, and efficiently communicates the nature of changes among team members and users.
 
-## Type and Description 🦄
+### Commit Message Structure
 
-A semantic commit has the following structural elements (types), which inform the user of your code about the intent of your commit:
+The convention specifies that commit messages should be structured as follows:
 
-- `feat` - Commits of this type indicate that your code section includes a **new feature** (related to the MINOR version of semantic versioning).
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+## Commit Types
+
+The specification defines the following commit types for commit messages:
+
+- **`feat`**: A new feature or functionality added to the codebase. Corresponds to **MINOR** changes in semantic versioning.
   
-- `fix` - Commits of this type indicate that your code section is **fixing a problem** (bug fix), (related to the PATCH version of semantic versioning).
+- **`fix`**: A fix for an issue or bug in the codebase. Corresponds to **PATCH** changes in semantic versioning.
   
-- `docs` - Commits of this type indicate **documentation changes**, such as changes to your repository's README (does not include code changes).
+- **`docs`**: Changes related to project documentation.
   
-- `test` - Commits of this type are used when there are **changes to tests**, such as creating, modifying, or deleting unit tests (does not include code changes).
+- **`test`**: Modifications to tests, such as adding or updating them.
   
-- `build` - Commits of this type are used when there are changes to **build files and dependencies**.
+- **`build`**: Changes to dependencies, build configurations, or related tools.
   
-- `perf` - Commits of this type identify any code changes related to **performance**.
+- **`perf`**: Improvements to performance within the code.
   
-- `style` - Commits of this type indicate changes related to **code formatting**, semicolons, trailing spaces, linting, etc. (does not include code changes).
+- **`style`**: Changes that affect code formatting without changing functionality.
   
-- `refactor` - Commits of this type refer to changes due to **refactoring that does not alter functionality**, such as changing how a part of the screen is processed but maintaining the same functionality, or improving performance due to a code review.
+- **`refactor`**: Code changes that do not affect functionality but improve the structure.
   
-- `chore` - Commits of this type indicate **updates to tasks** like build, admin configurations, packages, etc., such as adding a package to `.gitignore` (does not include code changes).
+- **`chore`**: Auxiliary tasks, such as modifying development tools or general configuration.
   
-- `ci` - Commits of this type indicate changes related to **continuous integration**.
+- **`ci`**: Changes to continuous integration configurations.
   
-- `raw` - Commits of this type indicate changes related to configuration files, data, features, or parameters.
+- **`raw`**: Changes related to file structures or data formats.
   
-- `cleanup` - Commits of this type are used to remove commented-out code, unnecessary sections, or any other kind of codebase cleanup aimed at improving readability and maintainability.
+- **`cleanup`**: Removal of unused or obsolete code.
   
-- `remove` - Commits of this type indicate the deletion of obsolete or unused files, directories, or features, reducing the size and complexity of the project and keeping it more organized.
+- **`remove`**: Removal of files or features.
+  
+- **`BREAKING CHANGE`**: Changes that break backward compatibility. Can be added as a footer or with the **`!`** symbol in the commit type.
 
-## Recommendations 🎉
+## Example Commit Messages
 
-- Add a type consistent with the content's title.
-- We recommend keeping the first line to a maximum of 4 words.
-- To describe in detail, use the commit description.
-- Use an emoji at the beginning of the commit message that represents the commit.
-- Links should be added in their most authentic form, i.e., no URL shorteners or affiliate links.
+- **Simple commit with type and description**  
+  `feat: add support for additional languages`
 
-## Commit Complements 💻
+- **Commit with type, scope, and BREAKING CHANGE**  
+  `feat(api)!: introduce new user API structure`  
+  `BREAKING CHANGE: the data structure has changed from JSON to XML.`
 
-- **Footer:** Information about the reviewer and the card number on Trello or Jira. Example: Reviewed-by: Elisandro Mello Refs #133.
-- **Body:** More detailed descriptions of what is contained in the commit, its impacts, and the reasons behind the changes made to the code, as well as essential instructions for future interventions. Example: See the issue for details on typos fixed.
-- **Descriptions:** A brief description of the change. Example: Correct minor typos in code.
+- **Commit with a detailed body**  
+  `fix: fix discount calculation issue`  
+  `The fix resolves an error that occurred when the discount was greater than the original price.`
 
-## Emoji Standards 💈
+- **Commit with footer, including ticket reference**  
+  `fix: fix typo in the code`  
+  `see the ticket for details on the typos fixed`  
+  `Refs #123`
 
-<table>
-  <thead>
-    <tr>
-      <th>Commit Type</th>
-      <th>Emoji</th>
-      <th>Keyword</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Accessibility</td>
-      <td>♿ <code>:wheelchair:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Adding a test</td>
-      <td>✅ <code>:white_check_mark:</code></td>
-      <td><code>test</code></td>
-    </tr>
-    <tr>
-      <td>Updating a submodule version</td>
-      <td>⬆️ <code>:arrow_up:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Rolling back a submodule version</td>
-      <td>⬇️ <code>:arrow_down:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Adding a dependency</td>
-      <td>➕ <code>:heavy_plus_sign:</code></td>
-      <td><code>build</code></td>
-    </tr>
-    <tr>
-      <td>Code review changes</td>
-      <td>👌 <code>:ok_hand:</code></td>
-      <td><code>style</code></td>
-    </tr>
-    <tr>
-      <td>Animations and transitions</td>
-      <td>💫 <code>:dizzy:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Bug fix</td>
-      <td>🐛 <code>:bug:</code></td>
-      <td><code>fix</code></td>
-    </tr>
-    <tr>
-      <td>Comments</td>
-      <td>💡 <code>:bulb:</code></td>
-      <td><code>docs</code></td>
-    </tr>
-    <tr>
-      <td>Initial commit</td>
-      <td>🎉 <code>:tada:</code></td>
-      <td><code>init</code></td>
-    </tr>
-    <tr>
-      <td>Configuration</td>
-      <td>🔧 <code>:wrench:</code></td>
-      <td><code>chore</code></td>
-    </tr>
-    <tr>
-      <td>Deploy</td>
-      <td>🚀 <code>:rocket:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Documentation</td>
-      <td>📚 <code>:books:</code></td>
-      <td><code>docs</code></td>
-    </tr>
-    <tr>
-      <td>In progress</td>
-      <td>🚧 <code>:construction:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>UI Styling</td>
-      <td>💄 <code>:lipstick:</code></td>
-      <td><code>feat</code></td>
-    </tr>
-    <tr>
-      <td>Infrastructure</td>
-      <td>🧱 <code>:bricks:</code></td>
-      <td><code>ci</code></td>
-    </tr>
-    <tr>
-      <td>Task List</td>
-      <td>🔜 <code>:soon:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Move/Rename</td>
-      <td>🚚 <code>:truck:</code></td>
-      <td><code>chore</code></td>
-    </tr>
-    <tr>
-      <td>New feature</td>
-      <td>✨ <code>:sparkles:</code></td>
-      <td><code>feat</code></td>
-    </tr>
-    <tr>
-      <td>Package.json in JS</td>
-      <td>📦 <code>:package:</code></td>
-      <td><code>build</code></td>
-    </tr>
-    <tr>
-      <td>Performance</td>
-      <td>⚡ <code>:zap:</code></td>
-      <td><code>perf</code></td>
-    </tr>
-    <tr>
-      <td>Refactor</td>
-      <td>♻️ <code>:recycle:</code></td>
-      <td><code>refactor</code></td>
-    </tr>
-    <tr>
-      <td>Code Cleanup</td>
-      <td>🧹 <code>:broom:</code></td>
-      <td><code>cleanup</code></td>
-    </tr>
-    <tr>
-      <td>Removing a file</td>
-      <td>🗑️ <code>:wastebasket:</code></td>
-      <td><code>remove</code></td>
-    </tr>
-    <tr>
-      <td>Removing a dependency</td>
-      <td>➖ <code>:heavy_minus_sign:</code></td>
-      <td><code>build</code></td>
-    </tr>
-    <tr>
-      <td>Responsiveness</td>
-      <td>📱 <code>:iphone:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Reverting changes</td>
-      <td>💥 <code>:boom:</code></td>
-      <td><code>fix</code></td>
-    </tr>
-    <tr>
-      <td>Security</td>
-      <td>🔒️ <code>:lock:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>SEO</td>
-      <td>🔍️ <code>:mag:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Version tag</td>
-      <td>🔖 <code>:bookmark:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Approval Test</td>
-      <td>✔️ <code>:heavy_check_mark:</code></td>
-      <td><code>test</code></td>
-    </tr>
-    <tr>
-      <td>Tests</td>
-      <td>🧪 <code>:test_tube:</code></td>
-      <td><code>test</code></td>
-    </tr>
-    <tr>
-      <td>Text</td>
-      <td>📝 <code>:pencil:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Typing</td>
-      <td>🏷️ <code>:label:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Error Handling</td>
-      <td>🥅 <code>:goal_net:</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Data</td>
-      <td>🗃️ <code>:card_file_box:</code></td>
-      <td><code>raw</code></td>
-    </tr>
-  </tbody>
-</table>
+## Optional Footers
 
-## 💻 Examples
+In addition to the description and body of the commit, you can include footers that provide additional context. Some examples include:
 
-<table>
-  <thead>
-    <tr>
-      <th>Git Command</th>
-      <th>GitHub Result</
+- **`BREAKING CHANGE`**: Used to indicate changes that break backward compatibility.  
+- **`Closes`**: Used to close a ticket or issue, e.g., `Closes #123`.  
+- **`Reviewed-by`**: Indicates who reviewed the commit, e.g., `Reviewed-by: John Doe`.
 
-th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>git commit -m "🎉 Initial commit"</code></td>
-      <td>🎉 Initial commit</td>
-    </tr>
-    <tr>
-      <td><code>git commit -m "💡 Fix typo in documentation"</code></td>
-      <td>💡 Fix typo in documentation</td>
-    </tr>
-    <tr>
-      <td><code>git commit -m "✨ Add user profile page"</code></td>
-      <td>✨ Add user profile page</td>
-    </tr>
-    <tr>
-      <td><code>git commit -m "🧹 Remove commented-out code"</code></td>
-      <td>🧹 Remove commented-out code</td>
-    </tr>
-  </tbody>
-</table>
+## Commit Message Rules and Specifications
+
+The commit message **must** follow the defined structure, with a type followed by a clear description. The use of a scope is optional but recommended to provide more context. It is important to choose the commit type precisely to ensure that the version history is well-organized.
+
+### Commit Requirements:
+
+1. **Commit Type**: Must be a clear noun such as `feat`, `fix`, `docs`, etc.
+2. **Scope (optional)**: Provides additional context about the part of the code affected, such as `feat(auth)` or `fix(parser)`.
+3. **Description**: A brief, clear summary of the change.
+4. **Body (optional)**: Detailed explanations or reasons for the change.
+5. **Footer (optional)**: To provide additional information, such as ticket references or breaking changes.
+
+## Why Use Conventional Commits?
+
+- **Automation**: Enables the automated generation of CHANGELOGs.
+- **Semantic Versioning**: Automatically determines the appropriate version increment (MAJOR, MINOR, PATCH).
+- **Easy Collaboration**: Facilitates communication about changes within the project among team members and external contributors.
+- **Automated Processes**: Can be integrated with CI/CD tools to trigger build, testing, and deployment processes.
+
+## Frequently Asked Questions (FAQ)
+
+1. **How should I handle commits during early development?**  
+   Even during early development phases, it’s recommended to follow the convention, as it helps document progress and keeps the history organized.
+
+2. **Should commit types be uppercase or lowercase?**  
+   The choice between uppercase or lowercase is flexible, but consistency should be maintained throughout the project.
+
+3. **What if a commit fits more than one type?**  
+   Whenever possible, break the commits into more specific ones. Otherwise, use multiple types within a single commit and clearly document this in the body.
+
+4. **Does this discourage fast development?**  
+   The idea behind Conventional Commits is not to discourage fast development but to ensure that development is organized and well-documented, even during rapid iterations.
+
+5. **How does Conventional Commits relate to SemVer?**  
+   - `feat` → MINOR (new features)
+   - `fix` → PATCH (bug fixes)
+   - `BREAKING CHANGE` → MAJOR (incompatible changes)
+
+## Final Considerations
+
+Adopting the **Conventional Commits** specification is highly recommended for teams looking to maintain an organized code history, automate semantic versioning, and streamline changelog generation. Additionally, it helps communicate developer intentions more clearly, benefiting everyone involved in the software development lifecycle.
+
+--- 
