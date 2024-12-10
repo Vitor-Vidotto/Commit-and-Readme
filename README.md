@@ -30,4 +30,5 @@ Veja a documentação completa [aqui](./CommitPTBR/Index.md)!
 ## Quer ver mais sobre o Readme?
 Veja a documentação completa [aqui](./ReadmePTBR/Index.md)!
 
+## Espero ter ajudado!
 ---
