@@ -34,6 +34,6 @@ Descrição breve do que o projeto faz e seus objetivos principais.
 Este projeto é licenciado sob a Licença MIT.
 
 
-## Wanna see more how i did my project documentation?
-See the complete documentation [here](./Readme.md)!
+## Quer ver um exemplo aplicado?
+Veja a documentação de exemplo: [here](./Readme.md)!
 
