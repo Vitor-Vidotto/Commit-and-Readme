@@ -12,7 +12,6 @@ See the complete documentation [here](./CommitEng/index.md)!
 
 ## Wanna see more about Readme?
 See the complete documentation [here](./ReadmeEng/index.md)!
-Aqui está a versão em português:
 
 ---
 
