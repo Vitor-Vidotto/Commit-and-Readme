@@ -37,3 +37,4 @@ Este projeto é licenciado sob a Licença MIT.
 ## Quer ver um exemplo aplicado?
 Veja a documentação de exemplo: [here](./README.md)!
 
+Se você quer voltar, clique em [Retornar ⏎](../README.md)

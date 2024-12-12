@@ -120,3 +120,4 @@ A mensagem de commit **deve** seguir a estrutura definida, com tipo seguido de u
 A adoção da especificação **Conventional Commits** é altamente recomendada para equipes que desejam manter um histórico de código organizado, facilitar o versionamento semântico e automatizar processos como a geração de CHANGELOGs. Além disso, a convenção ajuda a comunicar as intenções dos desenvolvedores de forma mais clara, beneficiando todos os envolvidos no ciclo de vida do software.
 
 --- 
+Se você quer voltar, clique em [Retornar ⏎](../README.md)
