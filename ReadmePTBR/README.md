@@ -1,4 +1,4 @@
-# AutomatizaLabs
+# Exemplo de documentação: AutomatizaLabs
 
 Este é um site corporativo construído com Next.js e Tailwind CSS. Ele exibe suas habilidades, projetos e conquistas com um design elegante e responsivo.
 
